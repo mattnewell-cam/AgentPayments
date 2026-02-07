@@ -1,0 +1,18 @@
+{
+  "name": "AgentPayments Access Program",
+  "description": "This site gates AI agent access behind a paid API key. To obtain a key, send a Solana USDC payment with a unique identifier as the memo. Once verified, use the key in the X-Agent-Key header on all requests.",
+  "protocol_version": "0.1",
+  "access": {
+    "header": "X-Agent-Key",
+    "method": "Send the key as the value of the X-Agent-Key HTTP header with every request."
+  },
+  "payment": {
+    "chain": "solana",
+    "token": "USDC",
+    "wallet_address": "PLACEHOLDER_SOLANA_WALLET_ADDRESS",
+    "price": "1.00",
+    "currency": "USDC",
+    "instructions": "Send the specified amount of USDC on Solana to the wallet address above. Include your desired API key as the transaction memo. Once the payment is confirmed on-chain, your key will be activated."
+  },
+  "contact": "admin@agentpayments.example.com"
+}
